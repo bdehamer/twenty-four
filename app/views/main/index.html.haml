@@ -1,0 +1,8 @@
+= form_tag("/", method: "post") do
+  %input#terms{type: 'text', name: 'terms', placeholder: 'Enter 4 terms'}
+  %input{type: 'submit', value: 'solve', style: 'visibility: hidden;'}
+
+- if @answer_set
+  - @answer_set.each do |answer|
+    %p
+      = answer
